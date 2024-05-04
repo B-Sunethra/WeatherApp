@@ -5,11 +5,9 @@ const WeatherApp = () => {
     const [city, setCity] = useState('');
     const [weather, setWeather] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
 
     const fetchWeather = async () => {
         setLoading(true);
-        setError('');
         try {
             const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=6eabe4ec2842432f940200358242702&q=${city}`);
             console.log("Error")
